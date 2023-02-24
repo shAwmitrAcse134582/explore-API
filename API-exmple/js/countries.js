@@ -1,7 +1,7 @@
 const loadCountries = () => {
 
     fetch('https://restcountries.com/v3.1/all')
-        .then(ress => ress.json())
+        .then(res => res.json())
         .then(data => displayCountries(data));
 }
 

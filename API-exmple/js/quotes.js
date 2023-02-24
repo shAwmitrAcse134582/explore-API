@@ -1,12 +1,20 @@
 const loadQuotes = () => {
     fetch('https://api.kanye.rest/')
         .then(res => res.json())
-        .then(data => console.log(data));
+        .then(data => displayQuotes(data));
 }
 
 
-const displayQuotes = quote => {
+const displayQuotes = quotes => {
     const blockQuote = document.getElementById('quote');
-    blockQuote.innerText = quote.quote;
+
+    const quoteDiv = document.createElement('div');
+    quoteDiv.classList.add('quote');
+    quoteDiv.innerHTML = `<p> ${quotes.quote}</p>`;
+    blockQuote.appendChild(quoteDiv);
+
+
 
 }
+
+loadQuotes();
