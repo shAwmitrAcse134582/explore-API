@@ -17,7 +17,7 @@ function displayComments(comments) {
     <p>Name:${comment.name}</p>
     <p>email:${comment.email}</p>
     <button onclick="loadPost()">click Me</button>
-
+    
     `;
         commentsField.appendChild(commentsDiv);
     }
